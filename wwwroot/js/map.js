@@ -35,3 +35,47 @@ map.on('draw:created', function (e) {
     // add layer to layer group (this makes it visible on the map)
     drawnItems.addLayer(layer);
 });
+
+/************************ [ database requests ] *********************************/
+
+/** create custom bootstrap alert based on type  */
+function _alert(message, type) {
+
+    var placeholder = $(".alert-placeholder");
+
+    var wrapper = document.createElement('div')
+    wrapper.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`
+
+    placeholder.append(wrapper);
+}
+
+/** add each feature layer in feature collection to map  */
+function _onEachFeature(feature, layer) {
+
+    layer.addTo(map);
+}
+
+function getAllFeaturesFromSqlDatabase() {
+
+    $.ajax({
+        type: "GET",
+        url: window.location.origin + "/SqlFeature/GetAllFeaturesFromDatabase",
+        contentType: "application/json ; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            if (data != "") {
+                var featureCollection = JSON.parse(data);
+                L.geoJSON(featureCollection, { onEachFeature: _onEachFeature });
+            }
+            else {
+                _alert('Application was unable to load data from the database', 'danger');
+            }
+        },
+        error: function () {
+            _alert('Application was unable to load data from the database', 'danger');
+        }
+    });
+}
+
+/** retrieve data to show on map */
+getAllFeaturesFromSqlDatabase();
