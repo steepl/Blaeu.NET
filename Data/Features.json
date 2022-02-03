@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "Willem Jansz. Blaeu, born near Uitgeest in 1571"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.708827808499335, 52.53034894953129 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "Willem studying astronomical observations"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 12.696606516838074, 55.90784703536224 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "First family home in house Amsterdam"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.8947424441576, 52.375310371929466 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "Willem opens \"de vergulde Sonnewijser\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.8974484577775, 52.37636999562694 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "The VOC appoints Willem as their official cartographer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.8978786170482635, 52.37088125036469 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "Funeral of Willem in 1638"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.8918235301971436, 52.373797954023665 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Joan",
+        "Description": "Burning down of the printing office"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.892288893461227, 52.3742359853793 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Joan",
+        "Description": "Joan burried at the Western Church"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.883986115455627, 52.37454137663263 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "Willem marries Maertgen Cornelisd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.749748595058918, 52.631307798241885 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Willem",
+        "Description": "Joan Blaeu is born"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.749748595058918, 52.631307798241885 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Joan",
+        "Description": "Joan studies law at the University of Leiden"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4.485034346580505, 52.15724260697647 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Layer": "Joan",
+        "Description": "Joan registred at the University of Padua"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 11.877427697181702, 45.40668348272598 ]
+      }
+    }
+  ]
+}

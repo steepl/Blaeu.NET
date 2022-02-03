@@ -54,5 +54,42 @@ namespace Blaeu.NET.Controllers.SQL.GeoJSON.Features
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult SaveFeaturesToDatabase(string data)
+        {
+            try
+            {
+                // create disposible text readers
+                using (var stringReader = new StringReader(data))
+                using (var jsonReader = new JsonTextReader(stringReader))
+                {
+                    SqlFeatureCollection sqlFeatureCollection = serializer.Deserialize<SqlFeatureCollection>(jsonReader);
+                    foreach (var feature in sqlFeatureCollection.Features)
+                    {
+                        SqlFeatureModel featureModel = feature;
+                        // if feature is a polygon, ensure ring orientation matches SQL Server requirements
+                        // see: https://github.com/NetTopologySuite/NetTopologySuite.IO.SqlServerBytes/issues/4)
+                        if (featureModel.Geometry.GeometryType == "Polygon")
+                        {
+                            featureModel.Geometry.Normalize();
+                            featureModel.Geometry = featureModel.Geometry.Reverse();
+                        }
+
+                        sqlDbContext.FeatureModels.Add(featureModel);
+                    }
+                }
+
+                sqlDbContext.SaveChanges();
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception thrown while deserializing GeoJSON: '{0}'", e);
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }

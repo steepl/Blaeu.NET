@@ -19,6 +19,12 @@ crossorigin=""></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
 <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
 
+<!-- add custom leaflet.draw extention to create save toolbar -->
+<script src="~/lib/leaflet.draw.save/dist/js/save.toolbar.js"></script>
+<script src="~/lib/leaflet.draw.save/dist/js/save.toolbar.save.js"></script>
+<script src="~/lib/leaflet.draw.save/dist/js/control.draw.save.js"></script>
+<link rel="stylesheet" href="~/lib/leaflet.draw.save/dist/css/save.css" />
+
 <link rel="stylesheet" href="~/css/map.css" />
 
 <div class="text-center">
@@ -28,6 +34,7 @@ crossorigin=""></script>
 
 <div id="map-container">
     <div class="alert-placeholder" role="alert"></div>
+    <div id="map-spinner" class="spinner-border" role="status"></div>
     <div id="map">
         <!-- leaflet map -->
     </div>

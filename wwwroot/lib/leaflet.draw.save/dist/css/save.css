@@ -1,0 +1,19 @@
+﻿.leaflet-draw-toolbar .leaflet-draw-save.save {
+    background-image: url("../img/save.svg");
+    background-size: auto;
+}
+
+.leaflet-touch .leaflet-draw-toolbar .leaflet-draw-save-save {
+    background-image: url("../img/save.svg");
+    background-size: auto;
+}
+
+leaflet-draw-toolbar .leaflet-draw-save-save.leaflet-disabled {
+    background-image: url("../img/save.svg");
+    background-size: auto;
+}
+
+.leaflet-touch .leaflet-draw-toolbar .leaflet-draw-save-save.leaflet-disabled {
+    background-image: url("../img/save.svg");
+    background-size: auto;
+}

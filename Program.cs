@@ -1,3 +1,4 @@
+using Blaeu.NET.Controllers.SQL;
 using Blaeu.NET.Models.SQL;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,8 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Add MVC controllers to the container as well.
+builder.Services.AddMvc().AddControllersAsServices();
+
 builder.Services.AddDbContext<SqlDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
         x => x.UseNetTopologySuite().EnableRetryOnFailure())
 );
 
@@ -29,6 +33,14 @@ using (var scope = app.Services.CreateScope())
 
     var sqlDbContext = services.GetRequiredService<SqlDbContext>();
     sqlDbContext.Database.EnsureCreated();
+
+    var sqlController = services.GetRequiredService<SqlController>();
+
+    // Seed database if it's empty.
+    if (!sqlDbContext.FeatureModels.Any())
+    {
+        sqlController.DbSeed();
+    }
 }
 
 app.UseHttpsRedirection();

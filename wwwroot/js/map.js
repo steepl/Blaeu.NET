@@ -16,8 +16,15 @@ let drawnItems = new L.FeatureGroup();
 map.addLayer(drawnItems);
 
 /** create new draw controller and add to map */
-let drawControl = new L.Control.Draw({
+let drawControl = new L.Control.Draw.Save({
+    draw: {
+        circle: false,
+        circlemarker: false
+    },
     edit: {
+        featureGroup: drawnItems
+    },
+    save: {
         featureGroup: drawnItems
     }
 }).setPosition("topright");
@@ -73,6 +80,37 @@ function getAllFeaturesFromSqlDatabase() {
         },
         error: function () {
             _alert('Application was unable to load data from the database', 'danger');
+        }
+    });
+}
+
+/** save features to SQL database  */
+function saveFeaturesToSqlDatabase(data) {
+
+    $.ajax({
+        type: "POST",
+        traditional: true,
+        url: window.location.origin + "/SqlFeature/SaveFeaturesToDatabase",
+        data: { data: data },
+        beforeSend: function () {
+            $(document.body)
+                .css({ "filter": "blur(2px)" })
+                .css({ "transition": "filter 1s" });
+            $("#map-spinner")
+                .fadeIn("fast");
+        },
+        success: function (message) {
+            _alert("Success, reloading page to view changes", "success");
+            setTimeout(function () { window.location.reload(); }, 1000);
+        },
+        error: function () {
+            _alert("Oops, it looks like something went wrong trying to save the data to the database.", "warning");
+            // stop spinner
+            $(document.body)
+                .css({ "filter": "" })
+                .css({ "transition": "filter 1s" });
+            $("#map-spinner")
+                .fadeOut("fast");
         }
     });
 }

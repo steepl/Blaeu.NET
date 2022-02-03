@@ -11,3 +11,11 @@
 	height: 600px;
 	width: 100%;
 }
+
+#map-spinner {
+	display: none;
+	position: absolute;
+	z-index: 200;
+	top: 50%;
+	left: 50%;
+}
