@@ -1,4 +1,21 @@
-﻿#map-container {
+﻿.leaflet-marker-point {
+	box-shadow: 0 0 0 2px white, 0 0 10px rgba(0, 0, 0, .35);
+	border-radius: 50%;
+}
+
+.leaflet-marker-point-green {
+	background-color: green;
+}
+
+.leaflet-marker-point-orange {
+	background-color: purple;
+}
+
+.leaflet-marker-point-gold {
+	background-color: gold;
+}
+
+#map-container {
 	width: 75%;
 	height: auto;
 	margin-top: 10px;
