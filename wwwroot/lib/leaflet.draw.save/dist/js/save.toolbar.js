@@ -1,5 +1,5 @@
 ﻿/***
- * class used for creating custom Leaflet.draw extended save toolbar  
+ * class used for initializing a custom Leaflet.draw extended save toolbar 
  */
 L.SaveToolbar = L.Toolbar.extend({
 

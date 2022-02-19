@@ -47,7 +47,7 @@ L.SaveToolbar.Save = L.Handler.extend({
     },
 
     _saveFeaturesToDatabase: function () {
-        // convert and stringy drawn items befire sending it to the database
+        // convert and stringify drawn items before sending it to the database
         var featureCollection = JSON.stringify(drawnItems.toGeoJSON());
 
         saveFeaturesToSqlDatabase(featureCollection);

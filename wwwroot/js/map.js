@@ -16,19 +16,24 @@ let drawnItems = new L.FeatureGroup();
 map.addLayer(drawnItems);
 
 /** create new draw controller and add to map */
-let drawControl = new L.Control.Draw.Save({
+let drawControl = new L.Control.Draw({
     draw: {
         circle: false,
         circlemarker: false
     },
     edit: {
         featureGroup: drawnItems
-    },
+    }
+}).setPosition("topright");
+
+let saveControl = new L.Control.Draw.Save({
     save: {
         featureGroup: drawnItems
     }
-}).setPosition("topright");
+}).setPosition("topleft");
+
 map.addControl(drawControl);
+map.addControl(saveControl);
 
 /** create event handler to trigger on drawn item */
 map.on('draw:created', function (e) {

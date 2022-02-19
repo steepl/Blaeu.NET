@@ -27,7 +27,7 @@
       "type": "Feature",
       "properties": {
         "Layer": "Willem",
-        "Description": "First family home in house Amsterdam"
+        "Description": "The Blaeu's first home in Amsterdam"
       },
       "geometry": {
         "type": "Point",
