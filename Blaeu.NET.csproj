@@ -15,8 +15,4 @@
     <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="2.0.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-  </ItemGroup>
-
 </Project>

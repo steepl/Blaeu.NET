@@ -16,3 +16,29 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.first-letter {
+    font-size: 80px;
+    line-height: 62px;
+    float: left;
+    font-family: -webkit-body;
+    margin-right: 5px;
+}
+
+#logo-container {
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#logo {
+    width: 250px;
+}
+
+#main-text {
+    width: 95%;
+    margin: auto;
+    text-align: justify;
+}

@@ -39,17 +39,31 @@ crossorigin=""></script>
 
 <link rel="stylesheet" href="~/css/map.css" asp-append-version="true"/>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="logo-container" class="text-center">
+    <img alt="Joan Blaeu" title="Joan Blaeu" id="logo" src="~/img/logo.svg" />
+    <h6><span>The Blaeus: Willem Janszoon, Joan & Cornelis..</span></h6>
 </div>
 
+<div class="alert-placeholder" role="alert"></div>
+
 <div id="map-container">
-    <div class="alert-placeholder" role="alert"></div>
     <div id="map-spinner" class="spinner-border" role="status"></div>
     <div id="map">
         <!-- leaflet map -->
     </div>
+</div>
+
+<div id="main-text">
+    <h5>A cartographic family</h5><hr />
+        <p><span class="first-letter">W</span>illem Jansz. Blaeu, born near Uitgeest (Netherlands, 1571), was a well-know cartographer, atlas maker and publisher. In his early years Willem studied mathematics on the island of Hven (Denmark). Here, under the guidance of the famous Danish astronomer Tycho Brahe, Willem learned the theory and practice of astronomical observations, as well as the art of instrument- and globe making.</p>
+        <p>In 1596, Willem returned to Alkmaar (Netherlands) where he married his wife Maertgen Cornelisd. In 1599, his first son (Joan Blaeu) was born. Not much later, the family moved to Amsterdam. In Amsterdam, Willem started his globe-, instrument- and map-making business. Publishing his first cartographic work (a globe) in 1599 and his first printed map (a map of the Netherlands) in 1604. As business flourished, Willem moved his office (currently residing in the Lastage) to a bigger location at the Damrak.</p>
+        <h6>VOC and Atlas Appendix</h6>
+        <p>In his later years, Willem specialized in maritime cartography, publishing his first edition of the pilot guide "Het Licht der Zeevaert" in 1608 and his first atlas (Atlas Appendix) in 1631. In 1633, Willem was appointed mapmaker of the Republic by the States General of Amsterdam, while later becoming the official cartographer of the VOC (Dutch East India Company).</p>
+        <p>After thirty years of publishing books, wall maps, globes, charts, pilot guides and atlases, Willem Jansz. Blaeu died in 1638. With his death, he left his prospering business to his sons Cornelis and Joan.</p>
+        <h6>Atlas Major</h6>
+        <p>After their father's death, Joan and Cornelis took over the business. However, when Cornelis died in 1645, Joan continued alone. As an adolescent Joan had studied law at the University of Leiden, and was know to have been registered at the University of Padua (Italy) in 1623. In 1662, building on top of his father's and his own work, Joan published Atlas Major. A magnificent piece of art with over 600 maps, more than 4000 pages, and one of the most expensive cartographic prints of the 17th century.</p>
+        <h6>End of line</h6>
+        <p>In 1672, a fire started at the printing office (now located at the Gravenstraat) burning down the whole building. In 1673, Joan died. After Joan's death, the remainder of the family stock was sold in five public auctions, dispersing books, atlases, copper plates and globes among the other map dealers and publishers in Amsterdam.<p>
 </div>
 
 <script src="~/js/map.js" asp-append-version="true" defer></script> 

@@ -15,8 +15,12 @@
 	background-color: gold;
 }
 
+.alert-placeholder {
+	margin: auto;
+}
+
 #map-container {
-	width: 75%;
+	position: relative;
 	height: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -25,8 +29,10 @@
 }
 
 #map {
+	position: relative;
 	height: 600px;
 	width: 100%;
+	z-index: 100;
 }
 
 #map-spinner {

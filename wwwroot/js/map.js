@@ -209,7 +209,7 @@ function saveFeaturesToSqlDatabase(data) {
         url: window.location.origin + "/SqlFeature/SaveFeaturesToDatabase",
         data: { data: data },
         beforeSend: function () {
-            $(document.body)
+            $(document.documentElement)
                 .css({ "filter": "blur(2px)" })
                 .css({ "transition": "filter 1s" });
             $("#map-spinner")
@@ -222,7 +222,7 @@ function saveFeaturesToSqlDatabase(data) {
         error: function () {
             _alert("Oops, it looks like something went wrong trying to save the data to the database.", "warning");
             // stop spinner
-            $(document.body)
+            $(document.documentElement)
                 .css({ "filter": "" })
                 .css({ "transition": "filter 1s" });
             $("#map-spinner")
