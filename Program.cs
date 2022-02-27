@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Add MVC controllers to the container as well.
-builder.Services.AddMvc().AddControllersAsServices();
+builder.Services.AddMvcCore().AddControllersAsServices();
 
 builder.Services.AddDbContext<SqlDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
