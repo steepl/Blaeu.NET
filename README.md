@@ -2,8 +2,6 @@
 
 ![image](https://user-images.githubusercontent.com/50868613/155357991-b80e7f3e-173c-4681-810b-be2886464021.png)
 
-Live version: <http://blaeunet-env.eba-nv6arnv6.eu-central-1.elasticbeanstalk.com/>
-
 Blaeu.NET is a straightforward ASP.NET (Core) MVC implementation of Leaflet, NetTopologySuite and SQL Server. It showcases the ability to create geometric data (such as points, lines or polygons) using a mapping library and store it in a database.
 
 ## Tech Stack and Services
